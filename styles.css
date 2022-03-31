@@ -10,6 +10,11 @@ body{
   margin-top: 200px;
 }
 
+.displayText{
+  margin-right: 5px;
+  float: right;
+}
+
 #displaySmall{
   color:azure;
   background-color: darkslategrey;
@@ -18,7 +23,6 @@ body{
   padding-bottom: 0;
   height: 20px;
 }
-
 #displayBig{
   color:azure;
   font-size: xx-large;

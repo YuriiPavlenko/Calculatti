@@ -10,11 +10,16 @@
 <body>
   <div class="calculator">
     <div class="display">
-      <div id="displaySmall"><span style="float: right">2</span></div>
-      <div id="displayBig"><span style="float: right;">5 + 2</span></div>
+      <div id="displaySmall">
+        <span id="displaySmallText" class="displayText" ></span>
+      </div>
+      <div id="displayBig">
+        <span id="displayBigText" class="displayText" ></span>
+      </div>
     </div>
     <div class="buttons">
-      <div class="item doubleButton">AC</div>
+      <div class="item">AC</div>
+      <div class="item">Log</div>
       <div class="item">DEL</div>
       <div class="item">&divide;</div>
       <div class="item">1</div>
@@ -34,6 +39,6 @@
       <div class="item doubleButton">=</div>
     </div>
   </div>
-  <script src="styles.css"></script>
+  <script src="script.js" type="module"></script>
 </body>
 </html>
