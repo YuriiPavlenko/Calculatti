@@ -2,7 +2,7 @@ const input = document.getElementById("displayBigText")
 const smallInput = document.getElementById("displaySmallText")
 let inputNumber = ""
 let previousNumber = 0
-let firstTime = true 
+let firstTime = true
 
 const addDigitToDisplay = (digit) => {
     inputNumber = `${inputNumber}${digit}`
@@ -109,38 +109,14 @@ const drobvroteyeebat = (dot) => {
     }
 }
 
-const logo = () => {
-
+const getFunctionCharacters = async () => {
+    const res = await fetch("https://swapi.dev/api/people/")
+    const data = await res.json()
+    return data
 }
-//HUESOS RAZRAB
-const myButtons = [...document.getElementsByClassName("item")]
-//govnoedstvo a ne kod
-const myFunctions = [
-    sbros,
-    logo,
-    removeDigitFromDisplay,
-    delenie,
-    () => addDigitToDisplay(1),
-    () => addDigitToDisplay(2),
-    () => addDigitToDisplay(3),
-    umnojenie,
-    () => addDigitToDisplay(4),
-    () => addDigitToDisplay(5),
-    () => addDigitToDisplay(6),
-    slojenie,
-    () => addDigitToDisplay(7),
-    () => addDigitToDisplay(8),
-    () => addDigitToDisplay(9),
-    otnimanie,
-    () => drobvroteyeebat("."),
-    () => addDigitToDisplay(0),
-    result,
-]
 
-const myNewFunction = myButtons.map((button, index) =>{
-return {buton: button, handler: myFunctions[index]}
-})
+const logo = () => {
+    
+}
 
-myNewFunction.forEach(({buton, handler}) => {
-    buton.addEventListener("click", handler)
-})
+export {result, umnojenie, addDigitToDisplay, removeDigitFromDisplay, slojenie, otnimanie, delenie, sbros,drobvroteyeebat,getFunctionCharacters,logo};
