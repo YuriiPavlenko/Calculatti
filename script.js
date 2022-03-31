@@ -114,7 +114,7 @@ const logo = () => {
 }
 
 const myButtons = [...document.getElementsByClassName("item")]
-
+//govnoedstvo a ne kod
 const myFunctions = [
     sbros,
     logo,
