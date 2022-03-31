@@ -112,7 +112,7 @@ const drobvroteyeebat = (dot) => {
 const logo = () => {
 
 }
-
+//HUESOS RAZRAB
 const myButtons = [...document.getElementsByClassName("item")]
 
 const myFunctions = [
