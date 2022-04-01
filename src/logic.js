@@ -165,4 +165,4 @@ const logarythm = async () => {
     displayArithmeticCalculation(res, "log");
 }
 
-export {result, multiplication as umnojenie, addDigitToDisplay, removeDigitFromDisplay, addition as slojenie, subtraction as otnimanie,  division as delenie, cleansing as sbros,drobvroteyeebat,logarythm as logo};
+export {result, multiplication, addDigitToDisplay, removeDigitFromDisplay, addition, subtraction,  division, cleansing,drobvroteyeebat,logarythm};

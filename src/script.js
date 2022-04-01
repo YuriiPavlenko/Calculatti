@@ -1,26 +1,26 @@
- import {result, umnojenie, addDigitToDisplay, removeDigitFromDisplay, slojenie, otnimanie, delenie, sbros,drobvroteyeebat,logo} from "./logic.js"
+import {result, multiplication, addDigitToDisplay, removeDigitFromDisplay, addition, subtraction,  division, cleansing,drobvroteyeebat,logarythm} from "./logic"
 
 const myButtons = [...document.getElementsByClassName("item")]
 /**
  * It is an Array of all functions in order. DON'T CHANGE THE ORDER - YOUR PENIS WILL WITHER
  */
 const myFunctions = [
-    sbros,
-    logo,
+    cleansing,
+    logarythm,
     removeDigitFromDisplay,
-    delenie,
+    division,
     () => addDigitToDisplay(1),
     () => addDigitToDisplay(2),
     () => addDigitToDisplay(3),
-    umnojenie,
+    multiplication,
     () => addDigitToDisplay(4),
     () => addDigitToDisplay(5),
     () => addDigitToDisplay(6),
-    slojenie,
+    addition,
     () => addDigitToDisplay(7),
     () => addDigitToDisplay(8),
     () => addDigitToDisplay(9),
-    otnimanie,
+    subtraction,
     () => drobvroteyeebat("."),
     () => addDigitToDisplay(0),
     result,
