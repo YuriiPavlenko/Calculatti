@@ -1,7 +1,9 @@
  import {result, umnojenie, addDigitToDisplay, removeDigitFromDisplay, slojenie, otnimanie, delenie, sbros,drobvroteyeebat,logo} from "./logic.js"
 
 const myButtons = [...document.getElementsByClassName("item")]
-
+/**
+ * It is an Array of all functions in order. DON'T CHANGE THE ORDER - YOUR PENIS WILL WITHER
+ */
 const myFunctions = [
     sbros,
     logo,
@@ -23,11 +25,15 @@ const myFunctions = [
     () => addDigitToDisplay(0),
     result,
 ]
-
+/**
+ * Assign a function by index for every button 
+ */
 const myNewFunction = myButtons.map((button, index) =>{
 return {buton: button, handler: myFunctions[index]}
 })
-
+/**
+ * Assing a EventListener by click for every button
+ */
 myNewFunction.forEach(({buton, handler}) => {
     buton.addEventListener("click", handler)
 })

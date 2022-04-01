@@ -4,29 +4,42 @@ let inputNumber = ""
 let previousNumber = 0
 let firstTime = true
 
-const addDigitToDisplay = (digit) => {
+/**
+ * Adds one digit to input number.
+ * @param {string} digit - The digit wich was clicked by user.
+ */
+const addDigitToDisplay = (digit) => { 
     inputNumber = `${inputNumber}${digit}`
     input.textContent = inputNumber
 }
+/**
+ * Removes one digit to input number when user clicks button "DEL".
+ */
 
 const removeDigitFromDisplay = () => {
     inputNumber = inputNumber.substring(0,inputNumber.length - 1)
     input.textContent = inputNumber
 }
-
-const mySuperPuperNewBeautifulFunction = (result,hui) => {
+/**
+ * Showes results of calculation prosesses on display.
+ */
+const displayArithmeticCalculation = (result,symbol) => {
     previousNumber = result
-    smallInput.textContent = `${previousNumber} ${hui}`
+    smallInput.textContent = `${previousNumber} ${symbol}`
     input.textContent = ""
     inputNumber = ""
 }
-
-const slojenie = () => {
+/**
+ * Calculating addition when user clicked button "+"
+ */
+const addition = () => {
     let res = inputNumber? parseFloat(inputNumber) + previousNumber: previousNumber
-    mySuperPuperNewBeautifulFunction(res, "+");
+    displayArithmeticCalculation(res, "+");
 }
-
-const delenie = () => {
+/**
+ * Calculating division when user clicked button "/"
+ */
+const  division = () => {
     let res = ""
     if(firstTime){
         res = inputNumber
@@ -41,10 +54,12 @@ const delenie = () => {
             return;
         } 
     }
-    mySuperPuperNewBeautifulFunction(res, "/");
+    displayArithmeticCalculation(res, "/");
 }
-
-const umnojenie = () => {
+/**
+ * Calculating multiplication when user clicked button "*"
+ */
+const multiplication = () => {
     let res = ""
     if(firstTime){
         res = inputNumber
@@ -53,22 +68,28 @@ const umnojenie = () => {
     else{
         res = inputNumber? parseFloat(inputNumber) * previousNumber: previousNumber
     }
-    mySuperPuperNewBeautifulFunction(res, "*");
+    displayArithmeticCalculation(res, "*");
 }
-
-const otnimanie = () => {
+/**
+ * Calculating subtraction when user clicked button "-"
+ */
+const subtraction = () => {
     let res = inputNumber? parseFloat(inputNumber) - previousNumber: previousNumber
-    mySuperPuperNewBeautifulFunction(res, "-");
+    displayArithmeticCalculation(res, "-");
 }
-
-const sbros = () => {
+/**
+ * Cleans all user's input,history of calculatoin and display when user clicks "AC"
+ */
+const cleansing = () => {
     firstTime = true
     inputNumber = ""
     previousNumber = 0
     smallInput.textContent = ""
     input.textContent = ""
 }
-
+/**
+ * Showes result of calculation when user clicked button "="
+ */
 const result = async () => {
     const lastznachok = smallInput.textContent[smallInput.textContent.length - 1];
     let result;
@@ -109,7 +130,10 @@ const result = async () => {
     }
     console.log(result)
 }
-
+/**
+ * Can make fraction when user clicked button "."
+ * @param {string} dot - Addes "." to users display.
+ */
 const drobvroteyeebat = (dot) => {
     let huinya =  inputNumber.split("")
     let jopa = huinya.some((govno) => govno === ".")
@@ -118,8 +142,10 @@ const drobvroteyeebat = (dot) => {
         input.textContent = inputNumber 
     }
 }
-
-const logo = async () => {
+/**
+ * Calculating logarithm when user clicked button "Log"
+ */
+const logarythm = async () => {
     let res;
     if(firstTime){
         res = inputNumber
@@ -136,7 +162,7 @@ const logo = async () => {
             res = previousNumber
         }
     }
-    mySuperPuperNewBeautifulFunction(res, "log");
+    displayArithmeticCalculation(res, "log");
 }
 
-export {result, umnojenie, addDigitToDisplay, removeDigitFromDisplay, slojenie, otnimanie, delenie, sbros,drobvroteyeebat,logo};
+export {result, multiplication as umnojenie, addDigitToDisplay, removeDigitFromDisplay, addition as slojenie, subtraction as otnimanie,  division as delenie, cleansing as sbros,drobvroteyeebat,logarythm as logo};
