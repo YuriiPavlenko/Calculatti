@@ -1,0 +1,24 @@
+{
+  "name": "calki",
+  "version": "1.0.0",
+  "description": "It is my practice program on Javascript. For this project i used **[Newton-API](https://github.com/aunyks/newton-api)** to calculate logarithms.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuriiPavlenko/Calculatti.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuriiPavlenko/Calculatti/issues"
+  },
+  "homepage": "https://github.com/YuriiPavlenko/Calculatti#readme",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}
