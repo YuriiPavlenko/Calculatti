@@ -8,85 +8,90 @@ let firstTime = true;
  * Adds one digit to input number.
  * @param {string} digit - The digit wich was clicked by user.
  */
-const addDigitToDisplay = (digit) => { 
-    inputNumber = `${inputNumber}${digit}`
-    input.textContent = inputNumber
-}
+const addDigitToDisplay = (digit) => {
+  inputNumber = `${inputNumber}${digit}`;
+  input.textContent = inputNumber;
+};
 /**
  * Removes one digit to input number when user clicks button "DEL".
  */
 
 const removeDigitFromDisplay = () => {
-    inputNumber = inputNumber.substring(0,inputNumber.length - 1)
-    input.textContent = inputNumber
-}
+  inputNumber = inputNumber.substring(0, inputNumber.length - 1);
+  input.textContent = inputNumber;
+};
 /**
  * Showes results of calculation prosesses on display.
  */
-const displayArithmeticCalculation = (result,symbol) => {
-    previousNumber = result
-    smallInput.textContent = `${previousNumber} ${symbol}`
-    input.textContent = ""
-    inputNumber = ""
-}
+const displayArithmeticCalculation = (result, symbol) => {
+  previousNumber = result;
+  smallInput.textContent = `${previousNumber} ${symbol}`;
+  input.textContent = "";
+  inputNumber = "";
+};
 /**
  * Calculating addition when user clicked button "+"
  */
 const addition = () => {
-    let res = inputNumber? parseFloat(inputNumber) + previousNumber: previousNumber
-    displayArithmeticCalculation(res, "+");
-}
+  let res = inputNumber
+    ? parseFloat(inputNumber) + previousNumber
+    : previousNumber;
+  displayArithmeticCalculation(res, "+");
+};
 /**
  * Calculating division when user clicked button "/"
  */
-const  division = () => {
-    let res = ""
-    if(firstTime){
-        res = inputNumber
-        firstTime = false
+const division = () => {
+  let res = "";
+  if (firstTime) {
+    res = inputNumber;
+    firstTime = false;
+  } else {
+    if (parseFloat(inputNumber) !== 0) {
+      res = inputNumber
+        ? previousNumber / parseFloat(inputNumber)
+        : previousNumber;
+    } else {
+      alert("You can't divide by 0!");
+      return;
     }
-    else{
-        if (parseFloat(inputNumber) !== 0){
-            res = inputNumber?  previousNumber / parseFloat(inputNumber): previousNumber
-        }   
-        else{
-            alert("You can't divide by 0!")
-            return;
-        } 
-    }
-    displayArithmeticCalculation(res, "/");
-}
+  }
+  displayArithmeticCalculation(res, "/");
+};
 /**
  * Calculating multiplication when user clicked button "*"
  */
 const multiplication = () => {
-    let res = ""
-    if(firstTime){
-        res = inputNumber
-        firstTime = false
-    }
-    else{
-        res = inputNumber? parseFloat(inputNumber) * previousNumber: previousNumber
-    }
-    displayArithmeticCalculation(res, "*");
-}
+  let res = "";
+  if (firstTime) {
+    res = inputNumber;
+    firstTime = false;
+  } else {
+    res = inputNumber
+      ? parseFloat(inputNumber) * previousNumber
+      : previousNumber;
+  }
+  displayArithmeticCalculation(res, "*");
+};
 /**
  * Calculating subtraction when user clicked button "-"
  */
 const subtraction = () => {
-    let res = inputNumber? parseFloat(inputNumber) - previousNumber: previousNumber
-    displayArithmeticCalculation(res, "-");
-}
+  let res = inputNumber
+    ? parseFloat(inputNumber) - previousNumber
+    : previousNumber;
+  displayArithmeticCalculation(res, "-");
+};
 /**
  * Cleans all user's input,history of calculatoin and display when user clicks "AC"
  */
 const cleansing = () => {
-    firstTime = true
-    inputNumber = ""
-    previousNumber = 0
-    smallInput.textContent = ""
-    input.textContent = ""
-}
+  firstTime = true;
+  inputNumber = "";
+  previousNumber = 0;
+  smallInput.textContent = "";
+  input.textContent = "";
+};
 /**
  * Showes result of calculation when user clicked button "="
  */
@@ -105,28 +110,30 @@ const result = async () => {
         result = previousNumber;
       }
     }
-    console.log(result)
-}
-/**
- * Can make fraction when user clicked button "."
- * @param {string} dot - Addes "." to users display.
- */
-const drobvroteyeebat = (dot) => {
-    let huinya =  inputNumber.split("")
-    let jopa = huinya.some((govno) => govno === ".")
-    if(jopa === false){
-        inputNumber = `${inputNumber}${dot}`
-        input.textContent = inputNumber 
+    if (lastznachok === "+") {
+      result = inputNumber
+        ? parseFloat(inputNumber) + previousNumber
+        : previousNumber;
     }
-}
-/**
- * Calculating logarithm when user clicked button "Log"
- */
-const logarythm = async () => {
-    let res;
-    if(firstTime){
-        res = inputNumber
-        firstTime = false
+    if (lastznachok === "-") {
+      result = inputNumber
+        ? parseFloat(inputNumber) - previousNumber
+        : previousNumber;
+    }
+    if (lastznachok === "*") {
+      result = inputNumber
+        ? parseFloat(inputNumber) * previousNumber
+        : previousNumber;
+    }
+    if (lastznachok === "/") {
+      if (parseFloat(inputNumber) !== 0) {
+        result = inputNumber
+          ? previousNumber / parseFloat(inputNumber)
+          : previousNumber;
+      } else {
+        alert("You can't divide by 0!");
+        return;
+      }
     }
     smallInput.textContent = "";
     input.textContent = result;
@@ -136,18 +143,22 @@ const logarythm = async () => {
   }
   console.log(result);
 };
-
-const drobvroteyeebat = (dot, inN = inputNumber) => {
-  let huinya = inN.split("");
+/**
+ * Can make fraction when user clicked button "."
+ * @param {string} dot - Addes "." to users display.
+ */
+const drobvroteyeebat = (dot) => {
+  let huinya = inputNumber.split("");
   let jopa = huinya.some((govno) => govno === ".");
   if (jopa === false) {
-    inN = `${inN}${dot}`;
-    input.textContent = inN;
+    inputNumber = `${inputNumber}${dot}`;
+    input.textContent = inputNumber;
   }
-  return inN;
 };
-
-const logo = async () => {
+/**
+ * Calculating logarithm when user clicked button "Log"
+ */
+const logarythm = async () => {
   let res;
   if (firstTime) {
     res = inputNumber;
@@ -162,7 +173,19 @@ const logo = async () => {
     } else {
       res = previousNumber;
     }
-    displayArithmeticCalculation(res, "log");
-}
+  }
+  displayArithmeticCalculation(res, "log");
+};
 
-export {result, multiplication, addDigitToDisplay, removeDigitFromDisplay, addition, subtraction,  division, cleansing,drobvroteyeebat,logarythm};
+export {
+  result,
+  multiplication,
+  addDigitToDisplay,
+  removeDigitFromDisplay,
+  addition,
+  subtraction,
+  division,
+  cleansing,
+  drobvroteyeebat,
+  logarythm,
+};

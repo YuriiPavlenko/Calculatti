@@ -1,24 +1,30 @@
 {
   "name": "calculatti",
   "version": "1.0.0",
-  "description": "",
   "main": "src/script.js",
   "type": "module",
+  "description": "It is my practice program on Javascript. For this project i used **[Newton-API](https://github.com/aunyks/newton-api)** to calculate logarithms.",
+  "jest": {
+    "transform": {}
+  },
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YuriiPavlenko/Calculatti.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["vanilla JS", "calculator"],
+  "author": "Eugen Crabs",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/YuriiPavlenko/Calculatti/issues"
   },
   "homepage": "https://github.com/YuriiPavlenko/Calculatti#readme",
+  "dependencies": {
+  },
   "devDependencies": {
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "jsdoc": "^3.6.10"
   }
 }
