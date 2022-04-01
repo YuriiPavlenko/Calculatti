@@ -69,10 +69,20 @@ const sbros = () => {
     input.textContent = ""
 }
 
-const result = () => {
+const result = async () => {
     const lastznachok = smallInput.textContent[smallInput.textContent.length - 1];
     let result;
     if(lastznachok !== undefined){
+        if(lastznachok === "g"){
+            if(inputNumber){
+                const httpResponsse = await fetch(`https://newton.now.sh/api/v2/log/${previousNumber}|${inputNumber}`)
+                const jsonObject = await httpResponsse.json()
+                result = jsonObject.result
+            }
+            else{
+                result = previousNumber
+            } 
+        }
         if (lastznachok === "+"){
             result = inputNumber? parseFloat(inputNumber) + previousNumber: previousNumber
         }
@@ -109,14 +119,24 @@ const drobvroteyeebat = (dot) => {
     }
 }
 
-const getFunctionCharacters = async () => {
-    const res = await fetch("https://swapi.dev/api/people/")
-    const data = await res.json()
-    return data
+const logo = async () => {
+    let res;
+    if(firstTime){
+        res = inputNumber
+        firstTime = false
+    }
+    else{
+        if(inputNumber){
+            const httpResponsse = await fetch(`https://newton.now.sh/api/v2/log/${previousNumber}|${inputNumber}`)
+            const jsonObject = await httpResponsse.json()
+            res = jsonObject.result
+
+        }
+        else{
+            res = previousNumber
+        }
+    }
+    mySuperPuperNewBeautifulFunction(res, "log");
 }
 
-const logo = () => {
-    
-}
-
-export {result, umnojenie, addDigitToDisplay, removeDigitFromDisplay, slojenie, otnimanie, delenie, sbros,drobvroteyeebat,getFunctionCharacters,logo};
+export {result, umnojenie, addDigitToDisplay, removeDigitFromDisplay, slojenie, otnimanie, delenie, sbros,drobvroteyeebat,logo};
