@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "It is my practice program on Javascript. For this project i used **[Newton-API](https://github.com/aunyks/newton-api)** to calculate logarithms.",
   "main": "index.js",
+  "jest": {
+    "transform": {}
+  },
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
