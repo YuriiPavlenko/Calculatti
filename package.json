@@ -14,7 +14,10 @@
     "type": "git",
     "url": "git+https://github.com/YuriiPavlenko/Calculatti.git"
   },
-  "keywords": ["vanilla JS", "calculator"],
+  "keywords": [
+    "vanilla JS",
+    "calculator"
+  ],
   "author": "Eugen Crabs",
   "license": "ISC",
   "bugs": {
@@ -22,6 +25,7 @@
   },
   "homepage": "https://github.com/YuriiPavlenko/Calculatti#readme",
   "dependencies": {
+    "node-fetch": "^3.2.3"
   },
   "devDependencies": {
     "jest": "^27.5.1",
