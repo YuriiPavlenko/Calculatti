@@ -2,13 +2,13 @@ import {
   removeDigitCheck,
   coreAddition,
   coreDivision,
-  coreLogarytm,
   coreMultiplication,
   coreSubtraction,
   digitCheck,
   fractionCheck,
   resultCheck,
 } from "./logicCheck.js"
+
 describe("Addition tests", () => {
   test("2+2 = 4????", () => {
     expect(coreAddition("2", 2)).toBe(4)
