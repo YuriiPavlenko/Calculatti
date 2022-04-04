@@ -1,50 +1,36 @@
-import {
-  result,
-  multiplication,
-  addDigitToDisplay,
-  removeDigitFromDisplay,
-  addition,
-  subtraction,
-  division,
-  cleansing,
-  fraction,
-  logarythm,
-} from "./logic.js"
+import calculations from "./logic.js"
 
 const myButtons = [...document.getElementsByClassName("item")]
 /**
- * It is an Array of all functions in order. DON'T CHANGE THE ORDER - YOUR PENIS WILL WITHER
+ * It is an Array of all functions in order.
+ * DON'T CHANGE THE ORDER - YOUR PENIS WILL WITHER.
  */
 const myFunctions = [
-  cleansing,
-  logarythm,
-  removeDigitFromDisplay,
-  division,
-  () => addDigitToDisplay(1),
-  () => addDigitToDisplay(2),
-  () => addDigitToDisplay(3),
-  multiplication,
-  () => addDigitToDisplay(4),
-  () => addDigitToDisplay(5),
-  () => addDigitToDisplay(6),
-  addition,
-  () => addDigitToDisplay(7),
-  () => addDigitToDisplay(8),
-  () => addDigitToDisplay(9),
-  subtraction,
-  fraction,
-  () => addDigitToDisplay(0),
-  result,
+  calculations.reset,
+  calculations.logarythm,
+  calculations.removeDigitFromDisplay,
+  calculations.division,
+  () => calculations.addDigitToDisplay(1),
+  () => calculations.addDigitToDisplay(2),
+  () => calculations.addDigitToDisplay(3),
+  calculations.multiplication,
+  () => calculations.addDigitToDisplay(4),
+  () => calculations.addDigitToDisplay(5),
+  () => calculations.addDigitToDisplay(6),
+  calculations.addition,
+  () => calculations.addDigitToDisplay(7),
+  () => calculations.addDigitToDisplay(8),
+  () => calculations.addDigitToDisplay(9),
+  calculations.subtraction,
+  calculations.fraction,
+  () => calculations.addDigitToDisplay(0),
+  calculations.result,
 ]
-/**
- * Assign a function by index for every button
- */
+
 const myNewFunction = myButtons.map((button, index) => {
   return { buton: button, handler: myFunctions[index] }
 })
-/**
- * Assing a EventListener by click for every button
- */
+
 myNewFunction.forEach(({ buton, handler }) => {
   buton.addEventListener("click", handler)
 })
