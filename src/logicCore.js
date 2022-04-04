@@ -1,53 +1,59 @@
+/**
+ * Parsing and calculating addition
+ * @param {number} prevNumber
+ * @param {string} currentString
+ * @returns {number}
+ */
+const coreAddition = (prevNumber, currentString) =>
+  prevNumber + parseFloat(currentString)
+/**
+ * Parsing and calculating subtraction
+ * @param {number} prevNumber
+ * @param {string} currentString
+ * @returns {number}
+ */
+const coreSubtraction = (prevNumber, currentString) =>
+  prevNumber - parseFloat(currentString)
+/**
+ * Parsing and calculating multiplication
+ * @param {number} prevNumber
+ * @param {string} currentString
+ * @returns {number}
+ */
+const coreMultiplication = (prevNumber, currentString) =>
+  prevNumber * parseFloat(currentString)
+/**
+ * Parsing and calculating division
+ * @param {number} prevNumber
+ * @param {string} currentString
+ * @returns {number}
+ */
+const coreDivision = (prevNumber, currentString) => {
+  if (parseFloat(currentString) !== 0)
+    return prevNumber / parseFloat(currentString)
+  throw new Error("Divided by 0")
+}
+/**
+ * Parsing and calculating logarytm asyncronously using Newton-API
+ * @param {number} prevNumber
+ * @param {string} currentString
+ * @returns {number}
+ */
+const coreLogarytm = async (prevNumber, currentString) => {
+  const httpResponsse = await fetch(
+    `https://newton.now.sh/api/v2/log/${prevNumber}|${currentString}`
+  )
+  const jsonObject = await httpResponsse.json()
+  return jsonObject.result
+}
+
 const coreCalculations = () => {
   return {
-    /**
-     * Parsing and calculating addition
-     * @param {number} prevNumber
-     * @param {string} currentString
-     * @returns {number}
-     */
-    coreAddition: (prevNumber, currentString) =>
-      prevNumber + parseFloat(currentString),
-    /**
-     * Parsing and calculating subtraction
-     * @param {number} prevNumber
-     * @param {string} currentString
-     * @returns {number}
-     */
-    coreSubtraction: (prevNumber, currentString) =>
-      prevNumber - parseFloat(currentString),
-    /**
-     * Parsing and calculating multiplication
-     * @param {number} prevNumber
-     * @param {string} currentString
-     * @returns {number}
-     */
-    coreMultiplication: (prevNumber, currentString) =>
-      prevNumber * parseFloat(currentString),
-    /**
-     * Parsing and calculating division
-     * @param {number} prevNumber
-     * @param {string} currentString
-     * @returns {number}
-     */
-    coreDivision: (prevNumber, currentString) => {
-      if (parseFloat(currentString) !== 0)
-        return prevNumber / parseFloat(currentString)
-      throw new Error("Divided by 0")
-    },
-    /**
-     * Parsing and calculating logarytm asyncronously using Newton-API
-     * @param {number} prevNumber
-     * @param {string} currentString
-     * @returns {number}
-     */
-    coreLogarytm: async (prevNumber, currentString) => {
-      const httpResponsse = await fetch(
-        `https://newton.now.sh/api/v2/log/${prevNumber}|${currentString}`
-      )
-      const jsonObject = await httpResponsse.json()
-      return jsonObject.result
-    },
+    coreAddition,
+    coreSubtraction,
+    coreMultiplication,
+    coreDivision,
+    coreLogarytm,
     /**
      * Add fraction symbol("."), if its not present.
      * @param {string} currentString
@@ -78,16 +84,13 @@ const coreCalculations = () => {
      */
     coreResult: async (prevNumber, currentString, smallDisplayText) => {
       const lastSymbol = smallDisplayText[smallDisplayText.length - 1]
-      if (lastSymbol === "+")
-        return this.coreAddition(prevNumber, currentString)
-      if (lastSymbol === "-")
-        return this.coreSubtraction(prevNumber, currentString)
+      if (lastSymbol === "+") return coreAddition(prevNumber, currentString)
+      if (lastSymbol === "-") return coreSubtraction(prevNumber, currentString)
       if (lastSymbol === "*")
-        return this.coreMultiplication(prevNumber, currentString)
-      if (lastSymbol === "/")
-        return this.coreDivision(prevNumber, currentString)
+        return coreMultiplication(prevNumber, currentString)
+      if (lastSymbol === "/") return coreDivision(prevNumber, currentString)
       if (lastSymbol === "g")
-        return await this.coreLogarytm(prevNumber, currentString)
+        return await coreLogarytm(prevNumber, currentString)
     },
   }
 }
