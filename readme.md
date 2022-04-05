@@ -27,7 +27,7 @@ const myFunction = (num1,num2) = {
 console.log(myFunction(3,4)) // 7
 ```        
 
-##2. How to do async function for working with API:
+## 2. How to do async function for working with API.
 
   This function send HTTP query and return resuls of calculation from site
   In my project i used the **Newton-API**
@@ -42,7 +42,7 @@ return jsonObject.result
   In async function you have to use **await** operator for waiting end of **Promise** object,
   also you have to use fetch() method
 
-##3. Make and use objects:
+## 3. Make and use objects.
 ```
 const newObject = {digit : 1 , color: "black"}
 console.log(newObject.color) // black
@@ -50,14 +50,14 @@ console.log(newObject.digit) // 1
 ```      
 It is an object with two parameters, you can call and use any of them.
 
-##4. Make and use arrays:
+## 4. Make and use arrays.
 ```
 const myArray = [1,2,3,4,5]
 console.log(myArray[1]) //2
 ```        
 Calculation of array elements starts from 0, in this exsample 0 element is 1
 
-##5. Work with array method:
+## 5. Work with array method.
 ```
 const myFirstArray = [1,2,3,4,5]
 const mySecondArray = ["red","yellow","blue","green","black"]
@@ -68,8 +68,9 @@ const myNewArray = myFirstArray.map((number, index) => {
 console.log(myNewArray[0]) // logs an object with two parameters {digit : 1, color : "red"}
 ```         
 Method .map makes an array of objects with two parameters
-Also you can use .forEach() if you want to do some with every element of new array
-##6. Work with "try...catch", this construction i used to make an error when user want to divide by 0.
+Also you can use .forEach() if you want to do some with every element of new array.
+
+## 6. Work with "try...catch".
  This construction trying to do something, and if it catchs an error it will show it 
 ```
 try {
@@ -84,7 +85,8 @@ try {
 }
 ```        
 
-##7. Export and import required functions or methods from another file, it can be most conveniently then have logic function it same file with app.
+## 7. Export and import.
+Required functions or methods from another file, it can be most conveniently then have logic function it same file with app.
 ```
 const myFunction = () =>{}
 
@@ -92,7 +94,9 @@ export myFunction
 import myFunction from "./yourFile.js"
 ```        
 Then you can import function to another file
-##8. Use Git, push and pull versions, work on enother branch, make commits and work with tikets.
+
+## 8. Use Git.
+Push and pull versions, work on enother branch, make commits and work with tikets.
 For push you code you need to use next comands:
 ```
 git add . //add file
@@ -104,9 +108,9 @@ git checkout -b nameOfNewBranch // creates a new branch
 ```      
 Never push your files to master brach! 
 
-##9. What is prettier, live server and live share.
+## 9. Live server and live share.
 
-##10. Writing tests and debugging my project:
+## 10. Writing tests and debugging my project
 In my program i have function - "coreAddition", this function make an addition of numbers
 ```
   describe("Addition tests", () => {
@@ -121,6 +125,6 @@ In my program i have function - "coreAddition", this function make an addition o
   })
 })
 ```
-##11. This documentation was written using **JSDoc** standart.
+## 11. This documentation was written using **JSDoc** standart.
 This standart is very comfortable. Using it you can make links into words, make bold type if you will put your word between  "** **" **yourWord**. Best of all, you can put your code between backticks `yourcode` and it will show in separate disign. 
 
