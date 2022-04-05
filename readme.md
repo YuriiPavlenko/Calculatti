@@ -113,9 +113,13 @@ Using Live server you can see you HTML document in real time.
 Using Live Share you can give file access to somebody and change or write code with another people in real time. 
 
 ## 10. Writing tests and debugging my project
-In my program i have function - "coreAddition", this function make an addition of numbers
+It is an example test what i wrote for testing addition.
+`Describe` - With this method you can create a block of tests, in my case it is addition.
+`test` - A function that compares `expect` and `toBe`.
+`expect` - It is result of given function.
+`toBe` - expected value.  
 ```
-  describe("Addition tests", () => {
+describe("Addition tests", () => {
   test("2+2 = 4", () => {
     expect(coreAddition("2", 2)).toBe(4)
   })
