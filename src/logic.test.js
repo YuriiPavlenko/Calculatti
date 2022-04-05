@@ -1,13 +1,4 @@
-import {
-  removeDigitCheck,
-  coreAddition,
-  coreDivision,
-  coreMultiplication,
-  coreSubtraction,
-  digitCheck,
-  fractionCheck,
-  resultCheck,
-} from "./logicCheck.js"
+import coreCalculation from "./logicCore.js"
 
 describe("Addition tests", () => {
   test("2+2 = 4????", () => {
