@@ -74,10 +74,7 @@ Also you can use .forEach() if you want to do some with every element of new arr
  This construction trying to do something, and if it catchs an error it will show it 
 ```
 try {
-  divisionValue = coreCalculations.coreDivision(
-  Number2,
-  Number1
-  )
+  divisionValue = coreCalculations.coreDivision(number2, number1)
   renderResult(divisionValue, "/")
 } catch (error) {
   console.error(error)
@@ -115,7 +112,7 @@ Using Live Share you can give file access to somebody and change or write code w
 ## 10. Writing tests and debugging my project
 In my program i have function - "coreAddition", this function make an addition of numbers
 ```
-  describe("Addition tests", () => {
+describe("Addition tests", () => {
   test("2+2 = 4", () => {
     expect(coreAddition("2", 2)).toBe(4)
   })
