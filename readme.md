@@ -74,7 +74,10 @@ Also you can use .forEach() if you want to do some with every element of new arr
  This construction trying to do something, and if it catchs an error it will show it 
 ```
 try {
-  divisionValue = coreCalculations.coreDivision(number2, number1)
+  divisionValue = coreCalculations.coreDivision(
+  Number2,
+  Number1
+  )
   renderResult(divisionValue, "/")
 } catch (error) {
   console.error(error)
@@ -112,7 +115,7 @@ Using Live Share you can give file access to somebody and change or write code w
 ## 10. Writing tests and debugging my project
 In my program i have function - "coreAddition", this function make an addition of numbers
 ```
-describe("Addition tests", () => {
+  describe("Addition tests", () => {
   test("2+2 = 4", () => {
     expect(coreAddition("2", 2)).toBe(4)
   })
@@ -124,6 +127,18 @@ describe("Addition tests", () => {
   })
 })
 ```
-## 11. This documentation was written using **JSDoc** standart.
-This standart is very comfortable. Using it you can make links into words, make bold type if you will put your word between  "** **" **yourWord**. Best of all, you can put your code between backticks `yourcode` and it will show in separate disign. 
+## 11. This documentation was written using **Markdown** standart.
+This standart is very comfortable. Using it you can make links into words, make bold type if you will put your word between  "** **" **yourWord**. Best of all, you can put your code between backticks `yourcode` and it will show in separate disign.
+
+## 12. Documentation into code was written using **JSDoc**.
+JSDoc is a language for documentation, below i will show the examlpe
+```
+/**
+Here you can write what this function doing
+*@param {type} num1 - here you can describe variable
+*@param {type} num2 - here you can describe variable
+*return {type} - if your function return something you can discribe it here 
+*/
+const myFunction = (num1,num2) => {}
+```
 
