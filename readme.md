@@ -27,7 +27,7 @@ const myFunction = (num1,num2) = {
 console.log(myFunction(3,4)) // 7
 ```        
 
-## 2. How to do async function for working with API.
+## 2. How to do async function to work with API.
 
   This function sends an HTTP query and returns the result of the calculation from the site
   In my project I used the **Newton-API**
