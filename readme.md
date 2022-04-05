@@ -28,19 +28,19 @@ console.log(myFunction(3,4)) // 7
 ```        
 
 2. How to do async function for working with API:
-```
 This function send HTTP query and return resuls of calculation from site
 In my project i used the **Newton-API**
 
+```
 const myFunction = async () => {
 const httpResponsse = await fetch(`https://newton.now.sh/api/v2/log/${prevNumber}|${currentString}`)
 const jsonObject = await httpResponsse.json()
 return jsonObject.result
 }
+```  
 
 In async function you have to use **await** operator for waiting end of **Promise** object,
 also you have to use fetch() method
-```  
 
 3. Make and use objects:
 ```
