@@ -45,12 +45,10 @@ Function also can have and use parameters :
 3. Make and use objects:
 
       `
-
        const newObject = {digit : 1 , color: "black"}
        console.log(newObject.color) // black
        console.log(newObject.digit) // 1
        //it is an object with two parameters, you can call and use any of them.
-
       `
 4. Make and use arrays:
 
@@ -58,7 +56,6 @@ Function also can have and use parameters :
           const myArray = [1,2,3,4,5]
           console.log(myArray[1]) //2
           // calculation of array elements starts from 0, in this exsample 0 element is 1
-
         `
 
 5. Work with array method:
@@ -73,7 +70,6 @@ Function also can have and use parameters :
          //method .map makes an array of objects with two parameters
          //also you can use .forEach() if you want to do some with every element of new array
          console.log(myNewArray[0]) // logs an object with two parameters {digit : 1, color : "red"}
-
          `
 6. Work with "try...catch", this construction i used to make an error when user want to divide by 0.
 
@@ -92,6 +88,13 @@ Function also can have and use parameters :
 
 7. Export and import required functions or methods from another file, it can be most conveniently then have logic function it same file with app.
 
+        `
+        const myFunction = () =>{}
+
+        export myFunction
+        //then you can import function to another file
+        import myFunction from "./yourFile.js"
+        `
 8. Use Git, push and pull versions, work on enother branch, make commits and work with tikets.
 For push you code you need to use next comands:
 
