@@ -131,5 +131,5 @@ For push you code you need to use next comands:
         `
 
 11. This documentation was written using **JSDoc** standart.
-This standart is very comfortable. Using it you can make links into words, make bold type if you will put your word between  "** **" **yourWord**. Best of all, you can put your code between "` `" `yourcode` and it will show in separate disign. 
+This standart is very comfortable. Using it you can make links into words, make bold type if you will put your word between  "** **" **yourWord**. Best of all, you can put your code between backticks `yourcode` and it will show in separate disign. 
 
