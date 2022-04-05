@@ -31,6 +31,7 @@ Function also can have and use parameters :
 2. How to do async function for working with API:
 
           `
+
           //this function send HTTP query and return resuls of calculation from site
           //in my project i used the **Newton-API**
           const myFunction = async () => {
@@ -42,7 +43,6 @@ Function also can have and use parameters :
           }
           /*in async function you have to use **await** operator for waiting end of **Promise** object,
           also you have to use fetch() method */
-
           `
 
 3. Make and use objects:
