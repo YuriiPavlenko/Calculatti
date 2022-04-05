@@ -102,6 +102,7 @@ import myFunction from "./yourFile.js"
 
 ## 8. Use Git.
 Push and pull versions, work on another branch, make commits and work with tickets!🎈
+
 To push your code you need to use the next commands:
 ```
 git add . //add file
@@ -116,7 +117,9 @@ Never push your files to the master branch or **YOUR PINES WILL WITHER**
 ## 9. Development tools.
 For this project I used VS Code as IDE.
 Using a **Live server** extention you can see your website document in real-time without instaling real server.
+
 Using **Live Share** extention you can give file access to somebody and change or write code with other people in real-time (pair programming).
+
 Using **Prettier** extention I don't care about formatting my code - it autoformats each time I save my files. 
 
 ## 10. Writing tests and debugging my project
