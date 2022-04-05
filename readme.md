@@ -31,7 +31,6 @@ Function also can have and use parameters :
 2. How to do async function for working with API:
 
           `
-
           //this function send HTTP query and return resuls of calculation from site
           //in my project i used the **Newton-API**
           const myFunction = async () => {
@@ -46,7 +45,6 @@ Function also can have and use parameters :
 3. Make and use objects:
 
       `
-
        const newObject = {digit : 1 , color: "black"}
        console.log(newObject.color) // black
        console.log(newObject.digit) // 1
@@ -79,8 +77,7 @@ Function also can have and use parameters :
          `
 6. Work with "try...catch", this construction i used to make an error when user want to divide by 0.
 
-        `
-        
+        ` 
         try {
          divisionValue = coreCalculations.coreDivision(
           Number2,
@@ -91,19 +88,28 @@ Function also can have and use parameters :
          console.error(error)
          alert("You can't divide by 0!")
          }
-
         `
 
 7. Export and import required functions or methods from another file, it can be most conveniently then have logic function it same file with app.
 
 8. Use Git, push and pull versions, work on enother branch, make commits and work with tikets.
+For push you code you need to use next comands:
+
+        `
+        git add . //add file
+        git commit -m "your text" // make a commit wich will be shown on GitHub
+        git push // pushes your files
+        git pull // pulls files from GitHub
+        git checkout // shows all branches you have
+        git checkout -b nameOfNewBranch // creates a new branch
+        //newer push your files to master brach! 
+        `
 
 9. What is prettier, live server and live share.
 
 10. Writing tests and debugging my project:
 
         `
-        
          //in my program i have function - "coreAddition", this function make an addition of numbers
           describe("Addition tests", () => {
           test("2+2 = 4", () => {
