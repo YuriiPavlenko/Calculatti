@@ -69,11 +69,13 @@ const myNewArray = myFirstArray.map((number, index) => {
 })
 console.log(myNewArray[0]) // logs an object with two parameters {digit : 1, color : "red"}
 ```         
-Method .map makes an array of objects with two parameters
-Also, you can use .forEach() if you want to do some with every element of the new array.
+Method `Array.prototype.map()` makes an array of objects with two parameters
+Also, you can use `Array.prototype.forEach()` if you want to do something with every element of the array.
 
 ## 6. Work with "try...catch".
- This construction trying to do something, and if it catches an error it will show it 
+ If the code inside try block throws an error we execute the code in catch block instead of crashing the application.
+ 
+ We also can log the error.
 ```
 try {
   divisionValue = coreCalculations.coreDivision(
@@ -88,17 +90,18 @@ try {
 ```        
 
 ## 7. Export and import.
-Required functions or methods from another file, it can be most conveniently then have a logic function in the same file with the app.
+ We can use required functions or methods from another file by using `import` statement.
+
+ It is useful to separate different parts of application in different files instead of having everything in one large file. 
 ```
 const myFunction = () =>{}
 
 export myFunction
 import myFunction from "./yourFile.js"
-```        
-Then you can import the function to another file
+```
 
 ## 8. Use Git.
-Push and pull versions, work on another branch, make commits and work with tickets.
+Push and pull versions, work on another branch, make commits and work with tickets!🎈
 To push your code you need to use the next commands:
 ```
 git add . //add file
@@ -108,14 +111,16 @@ git pull // pulls files from GitHub
 git checkout // shows all branches you have
 git checkout -b nameOfNewBranch // creates a new branch
 ```      
-Never push your files to the master branch! 
+Never push your files to the master branch or **YOUR PINES WILL WITHER**
 
-## 9. Live server and live share.
-Using a live server you can see your HTML document in real-time.
-Using Live Share you can give file access to somebody and change or write code with other people in real-time. 
+## 9. Development tools.
+For this project I used VS Code as IDE.
+Using a **Live server** extention you can see your website document in real-time without instaling real server.
+Using **Live Share** extention you can give file access to somebody and change or write code with other people in real-time (pair programming).
+Using **Prettier** extention I don't care about formatting my code - it autoformats each time I save my files. 
 
 ## 10. Writing tests and debugging my project
-It is an example test that I wrote for testing addition.
+It is an example test that I wrote for testing addition using **Jest**.
 
 `describe()` - With this method you can create a block of tests, in my case it is an addition.
 
@@ -138,17 +143,19 @@ describe("Addition tests", () => {
   })
 })
 ```
-## 11. This documentation was written using **Markdown** standard.
-This standard is very comfortable. Using it you can make links into words, make bold type if you will put your word between  "** **" **your word**. Best of all, you can put your code between backticks `your code` and it will show in a separate design.
+## 11. This documentation was written using **Markdown**.
+This markdown language is very comfortable. Using it you can make links into words, make bold type if you will put your word between  "** **" -> **your word**. 
 
-## 12. Documentation into code was written using **JSDoc**.
-JSDoc is a language for documentation, below I will show the example
+Best of all, you can put your code between backticks `your code` and it will show in a separate design.
+
+## 12. Documentation inside code was written using **JSDoc** standard.
+JSDoc is a library for documentation, below I will show an example
 ```
 /**
-Here you can write what this function doing
+*Here you can write what this function is doing
 *@param {type} num1 - here you can describe variable
 *@param {type} num2 - here you can describe variable
-*return {type} - if your function return something you can discribe it here 
+*return {type} - if your function returns something you can discribe it here 
 */
 const myFunction = (num1,num2) => {}
 ```
