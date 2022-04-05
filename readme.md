@@ -2,6 +2,8 @@
 It is my practice program on Javascript.
 For this project I used **[Newton-API](https://github.com/aunyks/newton-api)** to calculate logarithms.
 
+## How to run this project
+
 To run this website you need to download **Live Server** extention in **VS Code**.
 
 Then you can start the server by rightclicking **index.html** and choosing to run it with **Live Server**.
