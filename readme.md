@@ -35,9 +35,7 @@ Function also can have and use parameters :
           //this function send HTTP query and return resuls of calculation from site
           //in my project i used the **Newton-API**
           const myFunction = async () => {
-          const httpResponsse = await fetch(
-    `     https://newton.now.sh/api/v2/log/${prevNumber}|${currentString}`
-          )
+          const httpResponsse = await fetch(`https://newton.now.sh/api/v2/log/${prevNumber}|${currentString}`)
           const jsonObject = await httpResponsse.json()
           return jsonObject.result
           }
@@ -48,6 +46,7 @@ Function also can have and use parameters :
 3. Make and use objects:
 
       `
+
        const newObject = {digit : 1 , color: "black"}
        console.log(newObject.color) // black
        console.log(newObject.digit) // 1
