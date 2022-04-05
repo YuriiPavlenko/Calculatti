@@ -50,6 +50,7 @@ Function also can have and use parameters :
           // calculation of array elements starts from 0, in this exsample 0 element is 1
         `
 5. Work with array method:
+
         `
          const myFirstArray = [1,2,3,4,5]
          const mySecondArray = ["red","yellow","blue","green","black"]
@@ -58,8 +59,9 @@ Function also can have and use parameters :
             return {digit : number, color : mySecondArray[index]}
          })
          //method .map makes an array of objects with two parameters
-         console.log(myNewArray[0]) // logs an object with two parameters {digit : 1, color : "red"}
          //also you can use .forEach() if you want to do some with every element of new array
+         console.log(myNewArray[0]) // logs an object with two parameters {digit : 1, color : "red"}
+         
          `
 6. Work with "try...catch", this construction i used to make an error when user want to divide by 0.
         `try {
