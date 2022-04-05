@@ -109,6 +109,8 @@ git checkout -b nameOfNewBranch // creates a new branch
 Never push your files to master brach! 
 
 ## 9. Live server and live share.
+Using Live server you can see you HTML document in real time.
+Using Live Share you can give file access to somebody and change or write code with another people in real time. 
 
 ## 10. Writing tests and debugging my project
 In my program i have function - "coreAddition", this function make an addition of numbers
