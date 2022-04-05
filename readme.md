@@ -2,6 +2,12 @@
 It is my practice program on Javascript.
 For this project I used **[Newton-API](https://github.com/aunyks/newton-api)** to calculate logarithms.
 
+To run this website you need to download **Live Server** extention in **VS Code**.
+
+Then you can start the server by rightclicking **index.html** and choosing to run it with **Live Server**.
+
+Then it will appear on **[localhost:5500](http://localhost:5500)**
+
 Working on this project, I learned:
 ## 1. What is a function and how can I use it, for example:
 ```
