@@ -49,8 +49,9 @@ Function also can have and use parameters :
           console.log(myArray[1]) //2
           // calculation of array elements starts from 0, in this exsample 0 element is 1
         `
-5. Work with array methods:
-        `const myFirstArray = [1,2,3,4,5]
+5. Work with array method:
+        `
+         const myFirstArray = [1,2,3,4,5]
          const mySecondArray = ["red","yellow","blue","green","black"]
          
          const myNewArray = myFirstArray.map((number, index) => {
