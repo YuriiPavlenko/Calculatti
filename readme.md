@@ -50,6 +50,7 @@ Function also can have and use parameters :
        console.log(newObject.digit) // 1
        //it is an object with two parameters, you can call and use any of them.
       `
+      
 4. Make and use arrays:
 
         `
