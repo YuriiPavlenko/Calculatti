@@ -44,13 +44,13 @@ Function also can have and use parameters :
 
 3. Make and use objects:
 
-      `
-       const newObject = {digit : 1 , color: "black"}
-       console.log(newObject.color) // black
-       console.log(newObject.digit) // 1
-       //it is an object with two parameters, you can call and use any of them.
-      `
-      
+        `
+        const newObject = {digit : 1 , color: "black"}
+        console.log(newObject.color) // black
+        console.log(newObject.digit) // 1
+        //it is an object with two parameters, you can call and use any of them.
+        `
+
 4. Make and use arrays:
 
         `
