@@ -5,7 +5,8 @@ For this project i used **[Newton-API](https://github.com/aunyks/newton-api)** t
 Working on this project, i learnd:
 1. What is a function and how can i us it, for example:
         
-        ` const number1 = 3
+        `
+          const number1 = 3
           const number2 = 4
           let result = ""
 
@@ -17,17 +18,22 @@ Working on this project, i learnd:
           console.log(myFunction()) // 7
         `
 Function also can have and use parameters :
-        ` const myFunction = (num1,num2) = {
+
+        `
+         const myFunction = (num1,num2) = {
             result = num1 + num2
             return result 
           }
 
           console.log(myFunction(3,4)) // 7
-        ` 
+        `
+
 2. How to do async function for working with API:
-        //in my project i used the **Newton-API**
-        //this function send HTTP query and return resuls of calculation from site
-        ` const myFunction = async () => {
+
+          `
+          //this function send HTTP query and return resuls of calculation from site
+          //in my project i used the **Newton-API**
+          const myFunction = async () => {
           const httpResponsse = await fetch(
     `     https://newton.now.sh/api/v2/log/${prevNumber}|${currentString}`
           )
@@ -36,19 +42,28 @@ Function also can have and use parameters :
           }
           /*in async function you have to use **await** operator for waiting end of **Promise** object,
           also you have to use fetch() method */
-        `
+
+          `
+
 3. Make and use objects:
-      `const newObject = {digit : 1 , color: "black"}
+
+      `
+       const newObject = {digit : 1 , color: "black"}
        console.log(newObject.color) // black
        console.log(newObject.digit) // 1
        //it is an object with two parameters, you can call and use any of them.
+
       `
 
 4. Make and use arrays:
-        ` const myArray = [1,2,3,4,5]
+
+        `
+          const myArray = [1,2,3,4,5]
           console.log(myArray[1]) //2
           // calculation of array elements starts from 0, in this exsample 0 element is 1
+
         `
+
 5. Work with array method:
 
         `
@@ -61,10 +76,13 @@ Function also can have and use parameters :
          //method .map makes an array of objects with two parameters
          //also you can use .forEach() if you want to do some with every element of new array
          console.log(myNewArray[0]) // logs an object with two parameters {digit : 1, color : "red"}
-         
+
          `
 6. Work with "try...catch", this construction i used to make an error when user want to divide by 0.
-        `try {
+
+        `
+        
+        try {
          divisionValue = coreCalculations.coreDivision(
           Number2,
           Number1
@@ -74,6 +92,7 @@ Function also can have and use parameters :
          console.error(error)
          alert("You can't divide by 0!")
          }
+
         `
 
 7. Export and import required functions or methods from another file, it can be most conveniently then have logic function it same file with app.
@@ -83,7 +102,10 @@ Function also can have and use parameters :
 9. What is prettier, live server and live share.
 
 10. Writing tests and debugging my project:
-        ` //in my program i have function - "coreAddition", this function make an addition of numbers
+
+        `
+        
+         //in my program i have function - "coreAddition", this function make an addition of numbers
           describe("Addition tests", () => {
           test("2+2 = 4", () => {
             expect(coreAddition("2", 2)).toBe(4)
@@ -94,6 +116,7 @@ Function also can have and use parameters :
           test("What will you do with zero? ", () => {
             expect(coreAddition("0", 2)).toBe(2)
           })
-        }) 
+        })
+
         `
 
