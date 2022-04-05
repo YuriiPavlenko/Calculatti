@@ -5,8 +5,8 @@ For this project i used **[Newton-API](https://github.com/aunyks/newton-api)** t
 Working on this project, i learnd:
 1. What is a function and how can i us it, for example:
         
-        `
-          const number1 = 3
+        
+          `const number1 = 3
           const number2 = 4
           let result = ""
 
@@ -19,8 +19,7 @@ Working on this project, i learnd:
         `
 Function also can have and use parameters :
 
-        `
-         const myFunction = (num1,num2) = {
+        `const myFunction = (num1,num2) = {
             result = num1 + num2
             return result 
           }
@@ -30,8 +29,7 @@ Function also can have and use parameters :
 
 2. How to do async function for working with API:
 
-          `
-          //this function send HTTP query and return resuls of calculation from site
+          `//this function send HTTP query and return resuls of calculation from site
           //in my project i used the **Newton-API**
           const myFunction = async () => {
           const httpResponsse = await fetch(`https://newton.now.sh/api/v2/log/${prevNumber}|${currentString}`)
@@ -44,8 +42,7 @@ Function also can have and use parameters :
 
 3. Make and use objects:
 
-        `
-        const newObject = {digit : 1 , color: "black"}
+        `const newObject = {digit : 1 , color: "black"}
         console.log(newObject.color) // black
         console.log(newObject.digit) // 1
         //it is an object with two parameters, you can call and use any of them.
@@ -53,16 +50,14 @@ Function also can have and use parameters :
 
 4. Make and use arrays:
 
-        `
-          const myArray = [1,2,3,4,5]
+        `const myArray = [1,2,3,4,5]
           console.log(myArray[1]) //2
           // calculation of array elements starts from 0, in this exsample 0 element is 1
         `
 
 5. Work with array method:
 
-        `
-         const myFirstArray = [1,2,3,4,5]
+        `const myFirstArray = [1,2,3,4,5]
          const mySecondArray = ["red","yellow","blue","green","black"]
          
          const myNewArray = myFirstArray.map((number, index) => {
@@ -74,8 +69,7 @@ Function also can have and use parameters :
          `
 6. Work with "try...catch", this construction i used to make an error when user want to divide by 0.
 
-        `
-        // this construction trying to do something, and if it catchs an error it will show it 
+        `/ this construction trying to do something, and if it catchs an error it will show it 
         try {
          divisionValue = coreCalculations.coreDivision(
           Number2,
@@ -90,8 +84,7 @@ Function also can have and use parameters :
 
 7. Export and import required functions or methods from another file, it can be most conveniently then have logic function it same file with app.
 
-        `
-        const myFunction = () =>{}
+        `const myFunction = () =>{}
 
         export myFunction
         //then you can import function to another file
@@ -100,8 +93,7 @@ Function also can have and use parameters :
 8. Use Git, push and pull versions, work on enother branch, make commits and work with tikets.
 For push you code you need to use next comands:
 
-        `
-        git add . //add file
+        `git add . //add file
         git commit -m "your text" // make a commit wich will be shown on GitHub
         git push // pushes your files
         git pull // pulls files from GitHub
@@ -114,8 +106,7 @@ For push you code you need to use next comands:
 
 10. Writing tests and debugging my project:
 
-        `
-         //in my program i have function - "coreAddition", this function make an addition of numbers
+        `//in my program i have function - "coreAddition", this function make an addition of numbers
           describe("Addition tests", () => {
           test("2+2 = 4", () => {
             expect(coreAddition("2", 2)).toBe(4)
