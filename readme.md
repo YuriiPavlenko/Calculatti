@@ -115,9 +115,13 @@ Using Live Share you can give file access to somebody and change or write code w
 ## 10. Writing tests and debugging my project
 It is an example test what i wrote for testing addition.
 `Describe` - With this method you can create a block of tests, in my case it is addition.
+
 `test` - A function that compares `expect` and `toBe`.
+
 `expect` - It is result of given function.
-`toBe` - expected value.  
+
+`toBe` - expected value.
+  
 ```
 describe("Addition tests", () => {
   test("2+2 = 4", () => {
